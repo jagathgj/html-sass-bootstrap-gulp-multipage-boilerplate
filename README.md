@@ -4,10 +4,10 @@ Html Project
 npm install
 
 #Build the project
-npm run start
+npm run build
 
 #Run the pages live in browser
-npm run dev
+npm run start
 
 If nothing works, install gulp globally and follow above commands
 npm install -g gulp
