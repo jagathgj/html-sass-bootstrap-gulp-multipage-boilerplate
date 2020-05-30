@@ -1,0 +1,41 @@
+// Color Variables
+
+$white: #fff !default;
+$gray-100: #f0f0f7 !default;
+$gray-200: #eaecf4 !default;
+$gray-300: #dddfeb !default;
+$gray-400: #f6f5f7 !default;
+$gray-500: #afafaf !default;
+$gray-600: rgba(0, 0, 0, 0.16) !default;
+$gray-700: #9b9b9b !default;
+$gray-800: #4d4f5c !default;
+$gray-900: #e9e9f0 !default;
+$gray-1000: #a4afb7 !default;
+$black: #000 !default;
+
+$blue: #4e73df !default;
+$dark-blue: #3b3b53 !default;
+$solitude: #f0f2f8 !default;
+$zodiac: #43425d !default;
+$logan: #a5a4bf !default;
+$scarlet: #512b58 !default;
+$red: #ff4141 !default;
+$orange: #f5a31a !default;
+$yellow: #f6c23e !default;
+$turquoise: #43d8c9 !default;
+$primary: #43d8c9 !default;
+
+$text-gray-500: #9b9b9b !default;
+$text-zodiac: $zodiac !default;
+
+$border-gray: #e8e9ec !default;
+
+//body bg color
+$body-color: $gray-100 !default;
+
+//font family
+$font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+  $animation-duration: 200ms;

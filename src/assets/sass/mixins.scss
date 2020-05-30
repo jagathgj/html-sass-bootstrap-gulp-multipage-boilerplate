@@ -1,0 +1,79 @@
+//Transition Mixin//
+
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+//Rotate Mixin//
+
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+  -moz-transform: rotate($degrees);
+  -ms-transform: rotate($degrees);
+  -o-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
+//Box-shadow Mixin//
+@mixin box-shadow($args) {
+  -webkit-box-shadow: $args;
+  -moz-box-shadow: $args;
+  box-shadow: $args;
+}
+
+//Calc Mixin//
+@mixin calc($property, $expression) {
+	#{$property}: -moz-calc(#{$expression});
+	#{$property}: -webkit-calc(#{$expression});
+	#{$property}: -ms-calc(#{$expression});
+	#{$property}: -o-calc(#{$expression});
+	#{$property}: calc(#{$expression});
+}
+
+//flex-direction Mixin//
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+     -moz-flex-direction: $direction;
+      -ms-flex-direction: $direction;
+          flex-direction: $direction;
+}
+
+//flex order Mixin//
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+     -moz-box-ordinal-group: $val;     
+  	     -ms-flex-order: $val;     
+  	      -webkit-order: $val;  
+  		      order: $val;
+}
+
+//Animation Mixin//
+
+@mixin keyframe($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+
+  @-moz-keyframes $animation-name {
+    @content;
+  }
+
+  @-o-keyframes $animation-name {
+    @content;
+  }
+
+  @keyframes $animation-name {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}

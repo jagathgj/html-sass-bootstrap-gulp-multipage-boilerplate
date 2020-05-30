@@ -11,7 +11,12 @@ const jsImport = require('gulp-js-import');
 const sourcemaps = require('gulp-sourcemaps');
 const htmlPartial = require('gulp-html-partial');
 const clean = require('gulp-clean');
+const googleWebFonts = require( 'gulp-google-webfonts' );
+const cssbeautify = require('gulp-cssbeautify');
+const htmlbeautify = require('gulp-html-beautify')
 const isProd = process.env.NODE_ENV === 'prod';
+
+var options = { };
 
 const htmlFile = [
     'src/*.html'
@@ -22,6 +27,7 @@ function html() {
         .pipe(htmlPartial({
             basePath: 'src/assets/partials/'
         }))
+        .pipe(htmlbeautify())
         .pipe(gulpIf(isProd, htmlmin({
             collapseWhitespace: true
         })))
@@ -34,6 +40,11 @@ function css() {
         .pipe(sass({
             includePaths: ['node_modules']
         }).on('error', sass.logError))
+        .pipe(cssbeautify({
+            indent: '  ',
+            openbrace: 'separate-line',
+            autosemicolon: true
+        }))
         .pipe(gulpIf(!isProd, sourcemaps.write()))
         .pipe(gulpIf(isProd, cssmin()))
         .pipe(gulp.dest('public/assets/css/'));
@@ -44,7 +55,7 @@ function js() {
         .pipe(jsImport({
             hideConsole: true
         }))
-        .pipe(concat('all.js'))
+        // .pipe(concat('all.js'))
         .pipe(gulpIf(isProd, uglify()))
         .pipe(gulp.dest('public/assets/js'));
 }
@@ -54,6 +65,17 @@ function img() {
         .pipe(gulpIf(isProd, imagemin()))
         .pipe(gulp.dest('public/assets/img/'));
 }
+
+function fonts() {
+    return gulp.src('src/assets/fonts/*.{eot,svg,ttf,woff,woff2}')
+		.pipe(gulp.dest('public/assets/fonts/'));
+}
+
+function fontAwesome() {
+    return gulp.src('./node_modules/@fortawesome/**/*')
+		.pipe(gulp.dest('public/assets/vendor/'));
+}
+
 
 function serve() {
     browserSync.init({
@@ -74,6 +96,8 @@ function watchFiles() {
     gulp.watch('src/assets/**/*.scss', gulp.series(css, browserSyncReload));
     gulp.watch('src/assets/**/*.js', gulp.series(js, browserSyncReload));
     gulp.watch('src/assets/img/**/*.*', gulp.series(img));
+    gulp.watch('src/assets/**/*.{eot,svg,ttf,woff,woff2}', gulp.series(fonts));
+    gulp.watch('src/assets/vendor/**/*.*', gulp.series(fontAwesome));
 
     return;
 }
@@ -86,6 +110,8 @@ function del() {
 exports.css = css;
 exports.html = html;
 exports.js = js;
+exports.fonts = fonts;
+exports.fontAwesome = fontAwesome;
 exports.del = del;
-exports.serve = gulp.parallel(html, css, js, img, watchFiles, serve);
-exports.default = gulp.series(del, html, css, js, img);
+exports.serve = gulp.parallel(html, css, js, img, fonts, fontAwesome, watchFiles, serve);
+exports.default = gulp.series(del, html, css, js, fonts, img, fontAwesome);

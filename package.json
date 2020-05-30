@@ -1,21 +1,24 @@
 {
-  "name": "ostream",
+  "name": "htmlboilerplate",
   "version": "1.0.0",
-  "description": "ostream",
-  "author": "Orion Innovation",
+  "description": "Html BoilerPlate with Sass, Bootstrap 4, Gulp",
+  "author": "Jagath Jayakumar",
   "scripts": {
-    "start": "gulp",
-    "dev": "gulp serve",
+    "build": "gulp",
+    "start": "gulp serve",
     "prod": "cross-env NODE_ENV=prod gulp"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "bootstrap": "^4.5.0",
     "browser-sync": "^2.26.7",
     "cross-env": "^7.0.2",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
+    "gulp-cssbeautify": "^2.0.1",
     "gulp-cssmin": "^0.2.0",
+    "gulp-html-beautify": "^1.0.1",
     "gulp-html-partial": "^1.0.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-if": "^2.0.2",
@@ -25,5 +28,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gulp-google-webfonts": "^2.1.0"
+  }
 }

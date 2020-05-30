@@ -1,0 +1,16 @@
+@include keyframe(growIn) {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animated--grow-in {
+  @include animation(
+    "growIn 200ms transform cubic-bezier(.18,1.25,.4,1), opacity cubic-bezier(0,1,.4,1)"
+  );
+}
