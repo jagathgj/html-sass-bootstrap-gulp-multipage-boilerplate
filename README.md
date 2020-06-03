@@ -1,6 +1,6 @@
 
 [![Website](https://img.shields.io/badge/Author-JagathJayakumar-blueviolet.svg?style=flat)](https://www.hellojagath.com)
-[![License](https://img.shields.io/badge/Author-JagathJayakumar-brightgreen.svg?style=flat)](https://github.com/jagathgj/html-sass-bootstrap-gulp-multipage-boilerplate/blob/master/LICENSE.md)
+[![License](https://img.shields.io/badge/MIT-License-brightgreen.svg?style=flat)](https://github.com/jagathgj/html-sass-bootstrap-gulp-multipage-boilerplate/blob/master/LICENSE.md)
 
 <!-- <p align="center">
   <img src="./Design/mypng.png" />
