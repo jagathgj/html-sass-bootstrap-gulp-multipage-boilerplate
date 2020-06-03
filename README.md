@@ -24,9 +24,7 @@ npm install gulp -g
 
 ### Cloning
 
-A step by step series of examples that tell you how to get a development env running
-
-Clone github project 
+Clone project from github Repository
 
 ```
 $ git clone https://github.com/jagathgj/html-sass-bootstrap-gulp-multipage-boilerplate.git
