@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/MIT-License-brightgreen.svg?style=flat)](https://github.com/jagathgj/html-sass-bootstrap-gulp-multipage-boilerplate/blob/master/LICENSE.md)
 
 <p align="center">
-  <img src="./src/assets/img/banner.png" />
+  <img src="./src/assets/img/banner.PNG" />
 </p>
 
 ## Intro
