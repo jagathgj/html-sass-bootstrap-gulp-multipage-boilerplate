@@ -1,3 +1,11 @@
+
+[![Website](https://img.shields.io/badge/Author-JagathJayakumar-blueviolet.svg?style=flat)](https://www.hellojagath.com)
+[![License](https://img.shields.io/badge/Author-JagathJayakumar-brightgreen.svg?style=flat)](https://github.com/jagathgj/html-sass-bootstrap-gulp-multipage-boilerplate/blob/master/LICENSE.md)
+
+<!-- <p align="center">
+  <img src="./Design/mypng.png" />
+</p> -->
+
 # HTML Boilerplate
 
 The best starter kit for website with multipages using Bootstrap 4, Gulp 4, Sass, BrowserSync with minification.
